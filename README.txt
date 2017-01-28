@@ -11,9 +11,11 @@ Feedback, bug reports, and comments are not only welcome, but strongly encourage
 
 - AJ (@n33co)
 
-PS: This site template is fully responsive, meaning it'll look great on desktop 
+PS1: This site template is fully responsive, meaning it'll look great on desktop 
 (widescreen and standard), tablet and mobile device displays. To see what this looks
 like, just narrow down your browser window and hit "reload".
+
+PS2: Please Do not use the content of the webpage. 
 
 Credits:
 	

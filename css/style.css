@@ -480,6 +480,14 @@
 	.icon-linkedin:before			{ content: '\E083'; }
 	.icon-tumblr:before			{ content: '\E03f'; }
 	.icon-twitter:before			{ content: '\E12f'; }
+	.icon-instagram:before			{ content: '\E155'; }
+	.icon-soundcloud:before			{ content: '\E17a'; }
+	.icon-skype:before				{ content: '\E11b'; }
+	.icon-github:before				{ content: '\E057'; }
+	.icon-dropbox:before			{ content: '\E168'; }
+	.icon-blogger:before			{ content: '\E165'; }
+	.icon-wordpress:before			{ content: '\E171'; }
+	
 	
 		
 /*********************************************************************************/
