@@ -1,8 +1,24 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title> Mahsa's Virtual Land</title>
+<title>Mahsa Asadi — Researcher in RL & Human-Centered AI</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%234aaa6e'/><text y='73' x='50' text-anchor='middle' font-size='62' font-family='Georgia,serif' fill='white' font-weight='bold'>M</text></svg>">
 <meta charset="utf-8">
+<meta name="description" content="Mahsa Asadi is a postdoctoral researcher at Aalto University working at the intersection of reinforcement learning and human-centered AI.">
+<meta name="author" content="Mahsa Asadi">
+
+<!-- Open Graph (LinkedIn, Facebook, iMessage) -->
+<meta property="og:title" content="Mahsa Asadi — Researcher in RL & Human-Centered AI">
+<meta property="og:description" content="Postdoctoral researcher at Aalto University. Working at the intersection of reinforcement learning and human-centered AI.">
+<meta property="og:image" content="https://llvllahsa.github.io/images/me_AI_square.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://llvllahsa.github.io/">
+
+<!-- Twitter/X card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mahsa Asadi — Researcher in RL & Human-Centered AI">
+<meta name="twitter:description" content="Postdoctoral researcher at Aalto University. Working at the intersection of reinforcement learning and human-centered AI.">
+<meta name="twitter:image" content="https://llvllahsa.github.io/images/me_AI_square.jpg">
 <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet">
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="css/5grid/init.js?use=mobile,desktop"></script>
@@ -21,360 +37,811 @@
 <!--[if lte IE 8]>
 <link rel="stylesheet" href="css/ie8.css">
 <![endif]-->
+<style>
+  .panel > ul,
+  .panel > header + ul,
+  .panel > section,
+  .panel > p,
+  #Publications ul,
+  #Publications section,
+  #Publications header,
+  #experience ul,
+  #experience header,
+  #experience > div,
+  #experience > div { padding-left: 2em; padding-right: 2em; }
+</style>
 </head>
 <body class="homepage">
 <div id="wrapper">
   <nav id="nav">
-	  <a href="#me" class="icon icon-home active"><span>Me</span></a>
+	  <a href="#me" class="icon icon-user active"><span>About Me</span></a>
 	  <a href="#Education" class="icon icon-college"><span>Education</span></a>
-	  <a href="#Honors" class="icon icon-spark"><span>Honors</span></a>
-	  <a href="#project" class="icon icon-drawer"><span>Projects</span></a>
-	  <a href="#experience" class="icon icon-teaching"><span> Experience </span></a>
+	  <a href="#project" class="icon icon-light"><span>Research</span></a>
+	  <a href="#Publications" class="icon icon-book"><span>Articles</span></a>
+	  <a href="#experience" class="icon icon-file"><span style="width: 9em; margin-left: -4.5em;">Teaching &amp; Mentoring</span></a>
 	  <!-- <a href="#book" class="icon icon-book"><span> Books </span></a>-->
-	  <a href="#email" class="icon icon-contact"><span>Contact Me</span></a>
-	  <a href="http://ir.linkedin.com/pub/mahsa-asadi/70/125/b09/" class="icon icon-linkedin"><span>Linkedin</span></a>
-	  <a href="#Writing" class="icon icon-spark"><span>Writing</span></a>
+	  <a href="#extracurricular" class="icon icon-tilemenu"><span style="width: 9em; margin-left: -4.5em;">Community &amp; Talks</span></a>
+	  <a href="#Honors" class="icon icon-star"><span>Honors</span></a>
+	  <a href="#connect" class="icon icon-contact"><span>Reach Out</span></a>
   </nav>
   <div id="main">
     <article id="me" class="panel">
       <header>
         </br></br><h3>Mahsa Asadi</h3>
-	<h6>A Lifelong learner</h6>
+	<h6>A Lifelong learner,<br>Occasional unlearner.</h6>
       </header>
 	<body>
-	<span class="byline"></br>"Jungle</br> &nbsp doesn't know</br>&nbsp &nbsp it's countless dimensions yet..."</br> &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp-- Sohrab Sepehri
+	<span class="byline"></br></br>"Jungle</br> &nbsp doesn't know</br>&nbsp &nbsp it's countless dimensions yet..."</br> &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp-- Sohrab Sepehri
 	<!-- <b>Research Interest:</b></br> Machine Learning</br>Computational Modeling</br>Cognitive Psychology.</br>--></span>
-      <a href="#Education" class="jumplink pic"> <span class="jumplink arrow icon icon-right"><span>Go to my education</span></span> <img src="images/me.jpg" alt=""> </a> </article>
+      <a href="#Education" class="jumplink pic"> <span class="jumplink arrow icon icon-right"><span>Go to my education</span></span> <img src="images/me_AI_square.jpg" alt=""> </a> </article>
 	</body>
 	<article id = "Education" class="panel">
-		<header>
-			<h2>Education</h2>
-		</header>
-		<section class="5grid is-gallery">
-		<div class="row">
-          		<div class="4u"> <a href="#" class="image image-40"><img src="images/Schools/inria3.png" alt=""></a>
+
+		<style>
+		  .edu-row {
+		    display: flex; align-items: flex-start; gap: 1.2em;
+		    padding: 1.2em 3em;
+		  }
+		  .edu-logo { flex-shrink: 0; width: 13%; }
+		  .edu-logo img { width: 100%; display: block; }
+		  .edu-text { flex: 1; min-width: 0; }
+		  .edu-text .edu-title-row {
+		    display: flex; justify-content: space-between; align-items: baseline;
+		  }
+		  .edu-text .edu-date { font-size: 0.82em; color: #888; font-style: italic; white-space: nowrap; margin-left: 1em; }
+		  .edu-text .edu-sub { font-size: 0.88em; color: #666; margin-top: 0.15em; }
+		  .edu-text .edu-detail { font-size: 0.82em; color: #888; margin-top: 0.1em; }
+		  #Education header { margin-top: 1em; }
+		</style>
+
+		<header><h2>Profession</h2></header>
+
+		<div class="edu-row">
+			<div class="edu-logo"><a href="https://ml4bigdata.github.io/"><img src="images/Schools/Aalto_University_School_of_Science.png" alt="Aalto University"></a></div>
+			<div class="edu-text">
+				<div class="edu-title-row"><b>Postdoctoral Researcher</b><span class="edu-date">2025 – Present</span></div>
+				<div class="edu-sub"><a href="https://ml4bigdata.github.io/">Machine Learning Research Group</a>, Aalto University, Finland</div>
 			</div>
-			   <b>Ph.D. in Computer‌ Science</b> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Oct 2018 - Nov 2022</br>
-			   <span class="byline">MAGNET team, Inria Lille - Nord Europe, France.</span>	
 		</div>
-		<div class="row">
-			<div class="4u"> <a href="#" class="image image-40"><img src="images/Schools/ShirazU.jpg" alt=""></a> </div>
-			  <b>M.Sc. in Artificial Intelligence</b> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 2013 - March 2016</br>
-			  <span class="byline">Shiraz University, Iran.</span>
-			  GPA: 18.7/20 - Ranked 3<sup>rd</sup>	  
-    		</div>
-		<div class="row">
-		  <div class="4u"> <a href="#" class="image image-40"><img src="images/Schools/ShirazU.jpg" alt=""></a> </div>
-			  <b>B.Sc. in Computer Engineering</b> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 2007 - 2011</br>
-			  <span class="byline">Shiraz University, Iran.</span>
-			  GPA: 16.50/20 - Ranked 4<sup>th</sup>	  
-      		</div>
-		<div class="row">
-		  <div class="4u"> <a href="#" class="image image-40"><img src="images/Schools/NODET.jpg" alt=""></a> </div>
-			  <b>Diploma in Mathematics and Physics</b> &nbsp&nbsp&nbsp 2003 - 2007</br>
-			  <span class="byline">National Organization for Development of Exceptional Talenteds(NODET), Shiraz, Iran.</span>
+
+		<div class="edu-row">
+			<div class="edu-logo"><a href="https://research.cs.aalto.fi/pml/"><img src="images/Schools/Aalto_University_School_of_Science.png" alt="Aalto University"></a></div>
+			<div class="edu-text">
+				<div class="edu-title-row"><b>Postdoctoral Researcher</b><span class="edu-date">2023 – 2025</span></div>
+				<div class="edu-sub"><a href="https://research.cs.aalto.fi/pml/">Probabilistic Machine Learning (PML) Group</a>, Aalto University, Finland</div>
+			</div>
 		</div>
-		</section>
-		<h2> Summer Schools</h2></br>
-		<section class="5grid is-gallery">
-		<div class="row">
-          <div class="4u"> <a href="https://sites.google.com/view/mlss-2019" class="image image-40"><img src="images/Schools/mlss2019.gif" alt=""></a> </div>
-		  <b>Machine Learning Summer School 2019(MLSS)</b> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp July 2019</br>
-        </div>	
-		<div class="row">
-          <div class="4u"> <a href="https://tmlss.ro/" class="image image-40"><img src="images/Schools/tmlss.jpg" alt=""></a> </div>
-		  <b>Transylvanian Machine Learning Summer School</b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp July 2018</br>
-        </div>			
-		</section>
+
+		<header><h2>Education</h2></header>
+
+		<div class="edu-row">
+			<div class="edu-logo"><a href="https://www.inria.fr/en/"><img src="images/Schools/inria3.png" alt="Inria"></a></div>
+			<div class="edu-text">
+				<div class="edu-title-row"><b>Ph.D. in Computer Science</b><span class="edu-date">Oct 2018 – Nov 2022</span></div>
+				<div class="edu-sub">MAGNET team, Inria Lille – Nord Europe, France</div>
+			</div>
+		</div>
+
+		<div class="edu-row">
+			<div class="edu-logo"><a href="https://shirazu.ac.ir/en/home"><img src="images/Schools/Shiraz_University_logo.png" alt="Shiraz University"></a></div>
+			<div class="edu-text">
+				<div class="edu-title-row"><b>M.Sc. in Artificial Intelligence</b><span class="edu-date">2013 – 2016</span></div>
+				<div class="edu-sub">Shiraz University, Iran</div>
+				<div class="edu-detail">GPA: 18.7/20 · Ranked 3<sup>rd</sup></div>
+			</div>
+		</div>
+
+		<div class="edu-row">
+			<div class="edu-logo"><a href="https://shirazu.ac.ir/en/home"><img src="images/Schools/Shiraz_University_logo.png" alt="Shiraz University"></a></div>
+			<div class="edu-text">
+				<div class="edu-title-row"><b>B.Sc. in Computer Engineering</b><span class="edu-date">2007 – 2011</span></div>
+				<div class="edu-sub">Shiraz University, Iran</div>
+				<div class="edu-detail">GPA: 16.50/20 · Ranked 4<sup>th</sup></div>
+			</div>
+		</div>
+
+		<div class="edu-row">
+			<div class="edu-logo"><a href="https://sampad.gov.ir/"><img src="images/Schools/NODET.jpg" alt="NODET"></a></div>
+			<div class="edu-text">
+				<div class="edu-title-row"><b>Diploma in Mathematics and Physics</b><span class="edu-date">2003 – 2007</span></div>
+				<div class="edu-sub">NODET — National School for Exceptional Talents, Shiraz, Iran</div>
+			</div>
+		</div>
+
+		<header><h2>Summer Schools</h2></header>
+
+		<div class="edu-row">
+			<div class="edu-logo"><a href="https://sites.google.com/view/mlss-2019"><img src="images/Schools/mlss2019.gif" alt="MLSS 2019"></a></div>
+			<div class="edu-text">
+				<div class="edu-title-row"><b>Machine Learning Summer School (MLSS)</b><span class="edu-date">July 2019</span></div>
+			</div>
+		</div>
+
+		<div class="edu-row">
+			<div class="edu-logo"><a href="https://tmlss.ro/"><img src="images/Schools/tmlss.jpg" alt="TMLSS 2018"></a></div>
+			<div class="edu-text">
+				<div class="edu-title-row"><b>Transylvanian Machine Learning Summer School (TMLSS)</b><span class="edu-date">July 2018</span></div>
+			</div>
+		</div>
+
 	</article>
     <article id="project" class="panel">
       <header>
-        <h2>Projects</h2>
+        <h2>Research</h2>
       </header>
-      <section class="5grid is-gallery">
+
+      <p style="padding: 0 2em 0.5em; font-size: 0.92em; color: #555; line-height: 1.7em;">
+        My research bridges <b>reinforcement learning</b> and <b>human-centered AI</b> — specifically, how learning agents can make better decisions when interacting with a human and receiving feedback in various forms. I am interested in both the theoretical foundations of RL and human modeling leading to novel algorithms with the goal of building systems where human-AI interaction is principled and more effective in improving on sample complexity and regret bounds.
+	  </p>
+
+      <style>
+        /* Section sub-headers */
+        .proj-section-title {
+          font-size: 1.1em;
+          font-weight: bold;
+          color: #333;
+          border-left: 4px solid #5b8dd9;
+          padding-left: 0.6em;
+          margin: 1.2em 0 0.8em 0;
+        }
+        /* Status badges */
+        .badge {
+          display: inline-block;
+          font-size: 0.72em;
+          font-weight: bold;
+          border-radius: 12px;
+          padding: 0.1em 0.6em;
+          margin-left: 0.4em;
+          vertical-align: middle;
+        }
+        .badge-active   { background: #d4f5e2; color: #1a7a42; border: 1px solid #a0d9b8; }
+        .badge-paused   { background: #e8e8e8; color: #666;    border: 1px solid #ccc; }
+        .badge-complete { background: #dce8ff; color: #2a52a0; border: 1px solid #a8c0f0; }
+        /* Date styling */
+        .proj-date {
+          font-size: 0.82em;
+          color: #888;
+          font-style: italic;
+          margin-left: 0.5em;
+        }
+        /* Keyword tags */
+        .tags { margin-top: 0.3em; }
+        .tag {
+          display: inline-block;
+          font-size: 0.72em;
+          background: #f0f0f0;
+          border: 1px solid #ddd;
+          border-radius: 10px;
+          padding: 0.1em 0.55em;
+          margin: 0.15em 0.1em 0 0;
+          color: #555;
+        }
+        /* Earlier Projects toggle */
+        .proj-toggle {
+          cursor: pointer;
+          user-select: none;
+        }
+        .proj-toggle:hover { opacity: 0.75; }
+        /* Badge + date on their own line */
+        .proj-meta { display: block; margin: 0.2em 0 0.3em 0; }
+        #earlier-projects-content { display: none; }
+        /* Per-project card separation + flex layout */
+        .proj-gallery .row {
+          display: flex;
+          align-items: flex-start;
+          gap: 1.2em;
+          border-bottom: 1px solid #e8e8e8;
+          padding: 1em 0 1em 0;
+          margin-bottom: 0;
+        }
+        .proj-gallery .row:last-child { border-bottom: none; }
+        .proj-gallery .row [class="4u"] {
+          flex-shrink: 0;
+          width: 35%;
+        }
+        .proj-text {
+          flex: 1;
+          min-width: 0;
+        }
+      </style>
+
+      <header style="margin-top: 1em;"><h2>Projects</h2></header>
+
+      <!-- ── Human-in-the-Loop Decision Making ── -->
+      <div class="proj-section-title">Human-in-the-Loop Decision Making</div>
+      <section class="5grid is-gallery proj-gallery">
+
 		<div class="row">
-		  <div class="4u"> <a href="#" class="image image-50"><img src="images/Projects/CUCRL.png" alt=""></a> </div>
-		  &nbsp <b>Upper Confidence Reinforcement Learning exploiting state-action equivalence</b> (M.Sc. Internship)</br>
-			  </br>
+		  <div class="4u"> <a href="#" class="image image-50"><img src="images/Projects/CoffeeRoastBAIExample_diverse.png" alt="Structured Bandits"></a> </div>
+		  <div class="proj-text"><b>Structured Bandits with Human Assistance</b>
+		  <span class="proj-meta"><span class="badge badge-active">Active</span>
+		  <span class="proj-date">Mar 2025 – Present</span></span></br>
+		  Leveraging structure in stochastic multi-armed bandit problems to optimize the use of human feedback. The human is modeled as a bounded-rational oracle capable of detecting arms deviating beyond a threshold from the optimal. The goal is to balance exploration and querying to efficiently eliminate suboptimal arms and minimize regret. Current focus: bandits with Lipschitz structure.
+		  <div class="tags"><span class="tag">Bandits</span><span class="tag">Human Feedback</span><span class="tag">Lipschitz</span><span class="tag">Regret Minimization</span></div></div>
 		</div>
+
+		<div class="row">
+		  <div class="4u"> <a href="#" class="image image-50"><img src="images/Projects/human_ai_rl.svg" alt="Human-AI interaction"></a> </div>
+		  <div class="proj-text"><b>Human-Guided Near-Optimal Regret Bounds</b>
+		  <span class="proj-meta"><span class="badge badge-complete">Completed</span>
+		  <span class="proj-date">Nov 2024 – Mar 2025</span></span></br>
+		  Investigated whether side information from a bounded human oracle can improve theoretical guarantees of reinforcement learning. Focused on Upper Confidence Reinforcement Learning (UCRL): proposed an initial realistic user model and improved the regret guarantee of UCRL, providing a theoretical bound on the gain achievable through human assistance.
+		  <div class="tags"><span class="tag">UCRL</span><span class="tag">Human Oracle</span><span class="tag">Regret Bounds</span><span class="tag">Theory</span></div></div>
+		</div>
+
+		<div class="row">
+		  <div class="4u"> <a href="#" class="image image-50"><img src="images/Projects/drugdesign_pair.png" alt="Drug design"></a> </div>
+		  <div class="proj-text"><b>Lowering Cognitive Burden in RLHF for Drug Design</b>
+		  <span class="proj-meta"><span class="badge badge-complete">Completed</span>
+		  <span class="proj-date">Summer 2023 – Summer 2024</span></span></br>
+		  Proposed preferential feedback types to reduce cognitive burden on human annotators, leveraging the insight that humans find it easier to compare two instances than to evaluate a single one. Introduced a user model to effectively learn the reward using these new query types.
+		  <div class="tags"><span class="tag">RLHF</span><span class="tag">Drug Design</span><span class="tag">Cognitive Load</span><span class="tag">Reward Learning</span></div></div>
+		</div>
+
+      </section>
+
+      <!-- ── Theoretical Reinforcement Learning ── -->
+      <div class="proj-section-title">Theoretical Reinforcement Learning</div>
+      <section class="5grid is-gallery proj-gallery">
+
+		<div class="row">
+		  <div class="4u"> <a href="#" class="image image-50"><img src="images/Projects/federated_network.svg" alt="Federated network"></a> </div>
+		  <div class="proj-text"><b>Federated GTVMin Stochastic Multi-armed Bandit</b>
+		  <span class="proj-meta"><span class="badge badge-paused">On Pause</span>
+		  <span class="proj-date">Aug 2025 – Oct 2025</span></span></br>
+		  Proposed a Best Arm Identification (BAI) approach utilizing neighbouring agent estimates in a decentralized network of regret-minimizing agents. Employs a global total-variation-based minimization strategy as a recommender, establishing a baseline for BAI with minimal regret in federated settings.
+		  <div class="tags"><span class="tag">Federated Learning</span><span class="tag">Bandits</span><span class="tag">BAI</span><span class="tag">Decentralized</span></div></div>
+		</div>
+
+		<div class="row">
+		  <div class="4u"> <a href="#" class="image image-50"><img src="images/Projects/CUCRL.png" alt="CUCRL"></a> </div>
+		  <div class="proj-text"><b>Upper Confidence Reinforcement Learning exploiting state-action equivalence</b>
+		  <span class="proj-meta"><span class="badge badge-complete">Completed</span>
+		  <span class="proj-date">2019</span></span></br>
+		  Introduced a notion of similarity of state-action pairs based on the behavior of transition structures in order to reduce the regret bound of current approaches in reinforcement learning with single trajectory and unknown MDP. Proposed a method of clustering to group state-action pairs and aggregate group samples.
+		  <div class="tags"><span class="tag">UCRL</span><span class="tag">State-Action Equivalence</span><span class="tag">Clustering</span><span class="tag">MDP</span></div></div>
+		</div>
+
+		<div class="row">
+		  <div class="4u"> <a href="#" class="image image-50"><img src="images/Projects/mean_estimation_project.png" alt="Mean estimation"></a> </div>
+		  <div class="proj-text"><b>Online Personalized Mean Estimation in Collaboration</b>
+		  <span class="proj-meta"><span class="badge badge-complete">Completed</span>
+		  <span class="proj-date">2021 – 2022</span></span></br>
+		  In a network of agents each solving a personalized mean estimation problem, each agent receives a sample directly from its distribution and chooses a neighbour to communicate with. Using the Optimism in the Face of Uncertainty principle, proposed an algorithm to estimate the class of similar agents for each, with theoretical guarantees on class estimation and convergence time complexity.
+		  <div class="tags"><span class="tag">Multi-agent</span><span class="tag">Mean Estimation</span><span class="tag">OFU</span><span class="tag">Collaboration</span></div></div>
+		</div>
+
+      </section>
+
+      <!-- ── Earlier Projects (collapsible) ── -->
+      <div class="proj-section-title proj-toggle" onclick="(function(){
+        var c = document.getElementById('earlier-projects-content');
+        var main = document.getElementById('main');
+        var panel = document.getElementById('project');
+        if (c.style.display === 'none') {
+          c.style.display = 'block';
+          setTimeout(function() {
+            main.style.height = panel.scrollHeight + 'px';
+            c.scrollIntoView({behavior: 'smooth', block: 'start'});
+          }, 50);
+        } else {
+          c.style.display = 'none';
+          setTimeout(function() {
+            main.style.height = panel.scrollHeight + 'px';
+          }, 50);
+        }
+      })()">
+        Earlier Projects <span style="font-size:0.8em; font-weight:normal; color:#888;">(click to expand)</span>
+      </div>
+      <div id="earlier-projects-content">
+      <section class="5grid is-gallery proj-gallery">
 		<div class="row">
           <div class="4u"> <a href="#" class="image image-50"><img src="images/Projects/DMTL.png" alt=""></a> </div>
-          &nbsp <b>Distributed Multi-task Learning</b> <a href="Documents/DMTL%20-%20Mahsa%20Thesis.pdf">(M.Sc. Thesis)</a></br>
-		  We have solved the optimization problem of Multi-task learning in a distributed fasion while
-		  including the theoretical analysis of extending the framework on Policy Gradient Reinforcement
-		  Learning problems. We have reduced the convergence time of the algorithm and the memory consumption
-		  of each agent which makes this approach suitable for big data problems.</br>
+          <div class="proj-text"><b>Distributed Multi-task Learning</b> <a href="Documents/DMTL%20-%20Mahsa%20Thesis.pdf">(M.Sc. Thesis)</a>
+          <span class="proj-date">2015 – 2016</span></span></br>
+		  We have solved the optimization problem of Multi-task learning in a distributed fashion while including the theoretical analysis of extending the framework on Policy Gradient Reinforcement Learning problems. We have reduced the convergence time of the algorithm and the memory consumption of each agent which makes this approach suitable for big data problems.
+		  <div class="tags"><span class="tag">Multi-task Learning</span><span class="tag">Distributed</span><span class="tag">ADMM</span><span class="tag">Policy Gradient</span></div></div>
 		</div>
 		<div class="row">
           <div class="4u"> <a href="#" class="image image-50"><img src="images/Projects/FaceRecognition.png" alt=""></a> </div>
-          &nbsp <b>Online Face Recognition and Tracking</b></br>
-		  We have developed an online face recognition software. After some preprocessing(illumination 
-		  reduction and alignmenting the face) on each image of the video stream, we extract discriminative 
-		  features and train a generative model so as to recognize the identity of passing individuals. Our approach is
-		  fast enough to be used for online processing.</br>
+          <div class="proj-text"><b>Online Face Recognition and Tracking</b>
+          <span class="proj-date">2016</span></span></br>
+		  We have developed an online face recognition software. After some preprocessing (illumination reduction and aligning the face) on each image of the video stream, we extract discriminative features and train a generative model so as to recognize the identity of passing individuals. Our approach is fast enough to be used for online processing.
+		  <div class="tags"><span class="tag">Computer Vision</span><span class="tag">Face Recognition</span><span class="tag">Online Learning</span></div></div>
         </div>
         <div class="row">
           <div class="4u"> <a href="#" class="image image-50"><img src="images/Projects/EmotionDetection.jpg" alt=""></a> </div>
-          &nbsp <b>Facial Expression Detection</b></br>
-		  Our goal was to guess human emotions using facial expressions. To do so, we employed image
-		  processing techniques to extract initial features and used epsilon-SVR to transfer them into 
-		  a more discriminative space. Using these features, a model for facial emotion detection has 
-		  been constructed by SVM that returns the probability of each emotion category.</br>
+          <div class="proj-text"><b>Facial Expression Detection</b>
+          <span class="proj-date">M.Sc. course project</span></span></br>
+		  Our goal was to guess human emotions using facial expressions. Employed image processing techniques to extract initial features and used epsilon-SVR to transfer them into a more discriminative space. A model for facial emotion detection was constructed by SVM that returns the probability of each emotion category.
+		  <div class="tags"><span class="tag">Emotion Recognition</span><span class="tag">SVM</span><span class="tag">Computer Vision</span></div></div>
         </div>
 		<div class="row">
           <div class="4u"> <a href="#" class="image image-50"><img src="images/Projects/donorschoose_org_logo.jpg" alt=""></a> </div>
-          &nbsp <b>Predicting Excitement for DonorsChoose.org </b> - 
-		  <a href = "https://www.kaggle.com/c/kdd-cup-2014-predicting-excitement-at-donors-choose">(KDD Cup 2014)</a> - Top 25%</br>
-			Given projects' information from DonorsChoose.org, the goal of this project is 
-			to predict how exciting each project is. Using data mining techniques, we extracted relevant
-			and discriminative features from the raw information. Several sampling methods have been 
-			investigated to overcome the imbalanced dataset problem. Finally, different methods for learning 
-			the output value (Project's excitement prediction) such as random forest, naive bayes, etc. 
-			have been applied to complete the model.</br>
+          <div class="proj-text"><b>Predicting Excitement for DonorsChoose.org</b> — <a href="https://www.kaggle.com/c/kdd-cup-2014-predicting-excitement-at-donors-choose">KDD Cup 2014</a> — Top 25%
+          <span class="proj-date">2014</span></span></br>
+		  Given projects' information from DonorsChoose.org, predicted how exciting each project is. Using data mining techniques, extracted relevant and discriminative features. Investigated sampling methods to overcome the imbalanced dataset problem and applied random forest, naive bayes, and other methods.
+		  <div class="tags"><span class="tag">Data Mining</span><span class="tag">Classification</span><span class="tag">Imbalanced Data</span></div></div>
         </div>
 		<div class="row">
           <div class="4u"> <a href="#" class="image image-50"><img src="images/Projects/malwareDetect.jpeg" alt=""></a> </div>
-          &nbsp <b>Malware Detection using XCS</b></br>
-		  The goal of this project was to distinguish malicious and benign binary files. We proposed 
-		  two ideas to solve this problem:</br>
-		  1. ``XCS (RL-based Genetic Algorithm)'' and,</br>
-		  2. ``N-gram based feature weighting using Genetic Algorithm''.</br>
+          <div class="proj-text"><b>Malware Detection using XCS</b>
+          <span class="proj-date">M.Sc. course project</span></span></br>
+		  The goal was to distinguish malicious and benign binary files using: 1) XCS (RL-based Genetic Algorithm) and 2) N-gram based feature weighting using Genetic Algorithm.
+		  <div class="tags"><span class="tag">Security</span><span class="tag">Genetic Algorithm</span><span class="tag">XCS</span></div></div>
         </div>
 		<div class="row">
           <div class="4u"> <a href="#" class="image image-50"><img src="images/Projects/zolghadri-taheri.jpg" alt=""></a> </div>
-          &nbsp <b>Fuzzy Rule-Based Classification System</b></br>
-		  In this project we want to learn the rule weigths of a fuzzy rule based classification system.
-		  To do so, a three-steps greedy simulated annealing-based idea have been applied in order to 
-		  learn the weight of each of the rules. This approach is fast and efficient as it reduces the 
-		  number of rules required.</br>
+          <div class="proj-text"><b>Fuzzy Rule-Based Classification System</b>
+          <span class="proj-date">M.Sc. course project</span></span></br>
+		  Learned the rule weights of a fuzzy rule-based classification system using a three-step greedy simulated annealing approach. This reduces the number of rules required while remaining fast and efficient.
+		  <div class="tags"><span class="tag">Fuzzy Logic</span><span class="tag">Simulated Annealing</span><span class="tag">Classification</span></div></div>
         </div>
 		<div class="row">
           <div class="4u"> <a href="#" class="image image-50"><img src="images/Projects/Maze.png" alt=""></a> </div>
-          &nbsp <b>Behavior-Selection by Emotions and Cognition in a Multi-Goal Robot Task</b> (B.Sc. Project)</br>
-		  The goal of this project is to design a learning agent that finds a policy to live longer while 
-		  encountering conflicting situations. Therefore, I have implemented a reinforcement learning-based
-		  agent who maintains high performance while satisfying conflicting goals.</br>
-        </div>		
-		<!--
-		<div class="row">
-          <div class="4u"> <a href="#" class="image image-40"><img src="images/Projects/1.jpg" alt=""></a> </div>
-          F-Measure Maximization - IR
+          <div class="proj-text"><b>Behavior-Selection by Emotions and Cognition in a Multi-Goal Robot Task</b>
+          <span class="proj-date">B.Sc. Project</span></span></br>
+		  Designed a learning agent that finds a policy to live longer while encountering conflicting situations, implementing a reinforcement learning-based agent that maintains high performance while satisfying conflicting goals.
+		  <div class="tags"><span class="tag">Reinforcement Learning</span><span class="tag">Robotics</span><span class="tag">Multi-goal</span></div></div>
         </div>
-		<div class="row">
-          <div class="4u"> <a href="#" class="image image-40"><img src="images/Projects/1.jpg" alt=""></a> </div>
-          Ant Algorithm
-        </div>
-		<div class="row">
-          <div class="4u"> <a href="#" class="image image-40"><img src="images/Projects/TSP_UMICH.jpg" alt=""></a> </div>
-          TSP - advanced Algorithms!
-        </div>
-		<div class="row">
-          <div class="4u"> <a href="#" class="image image-40"><img src="images/Projects/1.jpg" alt=""></a> </div>
-          Signals and Systems!
-        </div>
-		<div class="row">
-          <div class="4u"> <a href="#" class="image image-40"><img src="images/Projects/tictactoe.jpg" alt=""></a> </div>
-          Tic-Tac-Toe Using RL!
-        </div>
-		-->		
       </section>
+      </div>
 
     </article>
+    <article id="Publications" class="panel">
+	<header style="display: flex; align-items: center; justify-content: space-between;">
+		<h2>Publications</h2>
+		<a href="https://scholar.google.com/citations?user=nUnFkq0AAAAJ&hl=en" title="Google Scholar profile" style="margin-right: 1.5em; opacity: 0.7; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">
+			<img src="images/google_scholar.ico" alt="Google Scholar" style="width: 1.4em; height: 1.4em; vertical-align: middle;">
+		</a>
+	</header>
+	<style>
+	  .pub-card { display: flex; gap: 1.2em; align-items: flex-start; padding: 1em 2em; border-bottom: 1px solid #eee; }
+	  .pub-card:last-child { border-bottom: none; }
+	  .pub-thumb { flex-shrink: 0; width: 18%; }
+	  .pub-thumb img { width: 100%; display: block; border-radius: 4px; }
+	  .pub-text { flex: 1; min-width: 0; font-size: 0.88em; line-height: 1.6em; }
+	  .pub-text .pub-title { font-weight: bold; }
+	  .pub-text .pub-meta { color: #888; font-size: 0.92em; margin-top: 0.2em; }
+	</style>
+
+	<header><b>Research Focus</b></header>
+
+	<div class="pub-card">
+		<div class="pub-thumb"><img src="images/Projects/dotted_gridworld_center_reward_two_opt_paths.png" alt="Near-optimal regret bounds"></div>
+		<div class="pub-text">
+			<div class="pub-title">Near-optimal regret bounds with human assistance</div>
+			<div class="pub-meta"><a href="https://rldm.org/">RLDM 2025</a> · <b>M. Asadi</b>, S. Kaski.</div>
+		</div>
+	</div>
+
+	<div class="pub-card">
+		<div class="pub-thumb"><img src="images/Projects/house_design1_2.png" alt="Model-Based RL"></div>
+		<div class="pub-text">
+			<div class="pub-title">Model-Based Reinforcement Learning Exploiting State-Action Equivalence</div>
+			<div class="pub-meta">ACML 2019 · <a href="http://proceedings.mlr.press/v101/asadi19a.html">Proceedings of Machine Learning Research</a> · <b>M. Asadi</b>, S. Talebi, H. Bourel, O. Maillard.</div>
+		</div>
+	</div>
+
+	<div class="pub-card">
+		<div class="pub-thumb"><img src="images/Projects/mean_estimation_project.png" alt="Mean Estimation"></div>
+		<div class="pub-text">
+			<div class="pub-title">Collaborative Algorithms for Online Personalized Mean Estimation</div>
+			<div class="pub-meta"><a href="https://openreview.net/forum?id=VipljNfZSZ">TMLR 2022</a> · <b>M. Asadi</b>, A. Bellet, O-A. Maillard, M. Tommasi.</div>
+		</div>
+	</div>
+
+	<header><b>Other Publications</b></header>
+
+	<div class="pub-card">
+		<div class="pub-thumb"><img src="images/Projects/HITL_Drugdesign-vailab.png" alt="Virtual Laboratories"></div>
+		<div class="pub-text">
+			<div class="pub-title">Virtual Laboratories: Domain-agnostic workflows for research</div>
+			<div class="pub-meta"><a href="https://arxiv.org/abs/2507.06271">arXiv:2507.06271</a>, 2025 · C. Sevilla-Salcedo, A. Tiihonen, <b>M. Asadi</b>, K. S. Luck, A. U. Erarslan, A. Klami, S. Kaski.</div>
+		</div>
+	</div>
+
+	<div class="pub-card">
+		<div class="pub-thumb"><img src="images/Projects/optimistic_distance.png" alt="PhD Thesis"></div>
+		<div class="pub-text">
+			<div class="pub-title">Identifying structure in online and collaborative learning problems</div>
+			<div class="pub-meta"><a href="https://inria.hal.science/tel-03892355/document">PhD Thesis</a> · <b>M. Asadi</b>, 2022.</div>
+		</div>
+	</div>
+
+	<div class="pub-card">
+		<div class="pub-thumb"><img src="images/Projects/DMTL.png" alt="DMTL"></div>
+		<div class="pub-text">
+			<div class="pub-title">Distributed Multi-task Learning</div>
+			<div class="pub-meta"><a href="/Documents/DMTL%20-%20Mahsa%20Thesis.pdf">Master Thesis</a> · <b>M. Asadi</b>, 2016.</div>
+		</div>
+	</div>
+
+    </article>
+
+    <article id="experience" class = "panel">
+
+	<header>
+		<h2>Teaching &amp; Mentoring</h2>
+	</header>
+
+	<style>
+	  .cv-section-title {
+	    font-size: 0.78em; font-weight: bold; text-transform: uppercase;
+	    letter-spacing: 0.08em; color: #999; margin: 1.5em 0 0.6em 0;
+	  }
+	  .cv-row {
+	    display: flex; gap: 1.2em; margin-bottom: 0.6em; align-items: baseline;
+	  }
+	  .cv-date {
+	    flex-shrink: 0; width: 7em; font-size: 0.82em; color: #999;
+	    font-style: italic; text-align: right;
+	  }
+	  .cv-content { flex: 1; min-width: 0; }
+	  .cv-content .cv-sub { font-size: 0.82em; color: #666; margin-top: 0.1em; }
+	</style>
+
+	<header><b>Supervision</b></header>
+
+	<div class="cv-row">
+		<div class="cv-date">Spring 2025</div>
+		<div class="cv-content">
+			<a href="https://aaltodoc.aalto.fi/server/api/core/bitstreams/82a22cd9-1e85-49ee-9403-b6c558f82e24/content">Investigating Feedback Types in RLHF and Large Language Models</a>
+			<div class="cv-sub">A. Valldeoriola Cardo · Bachelor Thesis</div>
+		</div>
+	</div>
+
+	<div class="cv-row">
+		<div class="cv-date">Fall 2024</div>
+		<div class="cv-content">
+			<a href="https://aaltodoc.aalto.fi/items/ceda49e8-7c62-4739-9759-61ee55dc2b9d">Investigating Feedback Types in Reinforcement Learning with Human Feedback</a>
+			<div class="cv-sub">E. Kokko · Bachelor Thesis</div>
+		</div>
+	</div>
+
+	<div class="cv-row">
+		<div class="cv-date">Summer 2024</div>
+		<div class="cv-content">
+			Inverse Reinforcement Learning for Drug Design
+			<div class="cv-sub">A. Honarvar · Master Internship</div>
+		</div>
+	</div>
+
+	<div class="cv-row">
+		<div class="cv-date">Spring 2024</div>
+		<div class="cv-content">
+			<a href="https://aaltodoc.aalto.fi/items/228408d5-77c7-4a78-a7be-42a6344c3b89">Sample Efficient Inverse Reinforcement Learning Literature Review</a>
+			<div class="cv-sub">J. Kokko · Bachelor Thesis</div>
+		</div>
+	</div>
+
+	<header><b>Teaching</b></header>
+
+	<div class="cv-row">
+		<div class="cv-date">2008 – 2015</div>
+		<div class="cv-content">
+			Teaching Assistant · Shiraz University
+			<div class="cv-sub">Advanced ML, ML, Artificial Intelligence, Algorithm Design, Discrete Mathematics, Fundamentals of Programming</div>
+		</div>
+	</div>
+
+	<div class="cv-row">
+		<div class="cv-date">2012 – 2014</div>
+		<div class="cv-content">
+			Lecturer · Introduction to Computer Science, <a href="http://www.ioinformatics.org/">IOI</a> &amp; <a href="http://icpc.baylor.edu/">ACM</a> — Farzanegan High School
+		</div>
+	</div>
+
+	<div class="cv-row">
+		<div class="cv-date">2008 – 2010</div>
+		<div class="cv-content">
+			Lecturer · <a href="http://www.ioinformatics.org/">IOI</a> &amp; <a href="http://icpc.baylor.edu/">ACM</a> — Farzanegan High School
+		</div>
+	</div>
+
+	<div class="cv-row">
+		<div class="cv-date">Spring 2008</div>
+		<div class="cv-content">ACM class for freshmen · Shiraz University</div>
+	</div>
+
+	<header><b>Earlier Research Positions</b></header>
+
+	<div class="cv-row">
+		<div class="cv-date">2017</div>
+		<div class="cv-content">
+			Research Internship · Inria Lille – Nord Europe, SequeL team (4 months)
+		</div>
+	</div>
+
+	<div class="cv-row">
+		<div class="cv-date">2016</div>
+		<div class="cv-content">
+			Shiraz University Center of Intelligent Vision and Image Processing (6 months)
+		</div>
+	</div>
+
+	<div class="cv-row">
+		<div class="cv-date">2014 – 2016</div>
+		<div class="cv-content">Shiraz University Machine Learning Lab</div>
+	</div>
+
+	<div class="cv-row">
+		<div class="cv-date">2013 – 2014</div>
+		<div class="cv-content">Shiraz University Image Processing and Vision Lab</div>
+	</div>
+
+	</article>
+
+	<article id="extracurricular" class="panel">
+		<header><h2>Community &amp; Talks</h2></header>
+
+		<header><b>Memberships:</b></header>
+		<ul style="list-style-type:circle">
+			<li>2016 - <a href="http://aiesec.org/"><b>AIESEC</b></a> Shiraz team member</li>
+			<li>2015 - 2016 - Shiraz University "Future Team"</li>
+			<li>2008 - 2012 - ACM student membership</li>
+			<li>2007 - 2011 - Shiraz University <b>ACM</b> association</li>
+			<li>2007 - 2009 - Computer Department's "Students' Scientific Council"</li>
+		</ul>
+
+		<header><b>Activities:</b></header>
+
+		<div class="pub-card">
+			<div class="pub-thumb"><img src="images/Events/WOA.jpg" alt="Women of Aalto"></div>
+			<div class="pub-text">
+				<div class="pub-title"><a href="https://www.instagram.com/womenofaalto/">Women of Aalto</a></div>
+				<div class="pub-meta">2026 – Present · President</div>
+			</div>
+		</div>
+
+		<div class="pub-card">
+			<div class="pub-thumb"><img src="images/Events/CAIHU.png" alt="AAAI Bridge Program"></div>
+			<div class="pub-text">
+				<div class="pub-title"><a href="https://sites.google.com/view/collab-ai-and-human-modeling/home">AAAI Bridge Program: Collaborative AI and Modeling of Humans</a></div>
+				<div class="pub-meta">2023 – 2024 · Organizer</div>
+			</div>
+		</div>
+
+		<div class="pub-card">
+			<div class="pub-thumb"><img src="images/Events/tedxshirazu.jpg" alt="TEDxShirazUniversity"></div>
+			<div class="pub-text">
+				<div class="pub-title"><a href="http://tedxshirazuniversity.com/">TEDxShirazUniversity</a></div>
+				<div class="pub-meta">2016 · Organizing Committee · Content Management &amp; Media team</div>
+			</div>
+		</div>
+
+		<div class="pub-card">
+			<div class="pub-thumb"><img src="images/Events/AIESEC-Logo.jpg" alt="AIESEC"></div>
+			<div class="pub-text">
+				<div class="pub-title"><a href="http://aiesec.org/"><b>AIESEC</b></a></div>
+				<div class="pub-meta">2016 · Team Member</div>
+			</div>
+		</div>
+
+		<div class="pub-card">
+			<div class="pub-thumb"><img src="images/Events/hourofcode.png" alt="Hour of Code"></div>
+			<div class="pub-text">
+				<div class="pub-title"><b>Hour of Code</b> for elementary school students</div>
+				<div class="pub-meta">2015 · Organizing Committee Member</div>
+			</div>
+		</div>
+
+		<ul style="list-style-type:circle; padding-left: 2em; padding-right: 2em;">
+			<li class="icon icon-star">2014 - Fall - <b>Weekly presentations of AI</b></li>
+				&nbsp&nbsp We presented various topics: Natural Language Processing, Reinforcement Learning, Optimization, etc.<br>
+			<li>2009 - <b>University Open Day program</b><br>
+			- Student chair of Computer Department</li>
+		</ul>
+
+		<header><b>Talks:</b></header>
+
+		<div class="pub-card">
+			<div class="pub-thumb">
+				<a href="https://www.youtube.com/watch?v=eY4kQo52GLo">
+					<img src="https://img.youtube.com/vi/eY4kQo52GLo/hqdefault.jpg" alt="Talk on Federated Online Personalized Mean Estimation" style="border-radius:4px;">
+				</a>
+			</div>
+			<div class="pub-text">
+				<div class="pub-title"><a href="https://www.youtube.com/watch?v=eY4kQo52GLo">Talk on Federated Online Personalized Mean Estimation</a></div>
+				<div class="pub-meta">2025 Aug</div>
+			</div>
+		</div>
+
+		<ul style="list-style-type:circle; padding-left: 2em; padding-right: 2em;">
+			<li> 2020 Sep - Talk on Programming, Shiraz University</li>
+			<li> 2019 Jun - Talk on Academia Abroad, Shiraz University</li>
+		</ul>
+
+		<div class="icon icon-star" style="margin-top: 1em;">:= Our Team/I have been the initiator.</div>
+
+	</article>
+
 	<article id="Honors" class = "panel">
 		<header> <h2>Honors and Awards</h2> </header>
-		<ul style="list-style-type:circle">
-		<li>2019 - Best Student Paper Award at <a href="http://www.acml-conf.org/2019/conference/accepted-papers/">ACML 2019</a></li>
-		<li>2019 - Accommodation Scholarship for MLSS 2019</li>	
-		<li>2018 - Full Scholarship to attend TMLSS 2018</li>
-		<li>2018 - Best Poster award at TMLSS 2018</li>
-		<li>2016 - Ranked 3rd among Artificial Intelligence Major Students at Shiraz University.</li>	
-		<li>2014 - Among <b>Top 2%</b> participants of Iranian <b>PhD</b> Entrance Exam - Artificial Intelligence </br></li>
-<!--		<li><b>RoboCup Soccer 2D Simulation league:</b></li>
-		2014 - 1<sup>st</sup> Place in IranOpen2014, Cyrus Team (As Supervisor)[<a href="http://2014.iranopen.ir/en-gb/home.aspx">Here</a>] -->
-		<li><b>16<sup>th</sup> Iran National Collegiate Olympiad in Computer Engineering</b>[<a href="http://olympiad.sanjesh.org">Here</a>]:</li>
-			2012 - Awarded by Shiraz University's office of Exceptional Talented Students[<a href="http://dahad.shirazu.ac.ir/">Here</a>]</br>
-			2011 - 13<sup>th</sup> Place in the final round among 9 regions' tops </br>
-			2011 - 2<sup>nd</sup> Place in the 6<sup>th</sup> region's competiton </br>
-<!--		<li>2011 <b>Honory Admission</b>: Amirkabir University of Technology's M.Sc. in Artificial Intelligence program, Office of Exceptional Talent students[<a href="http://momtaz.aut.ac.ir/">Here</a>]</li>
-		<li><b>IEEE CIG Competiton - Ms. PacMan[<a href="http://www.pacman-vs-ghosts.net/">Here</a>]</b>:</li>
-			2011 - 5<sup>th</sup> Place in Ghost controllers competition, Team Name:Scintillants</br> -->
-		<li><b>ACM-ICPC </b>- (Scintillants &rarr; RSM Team)[<a href="http://icpc.baylor.edu/">Here</a>]:</li>
-			<img class="image-40"src="images/RSM.jpeg">
-			<!--2010 - Best Full girl team award, Asia Region Competitions, Sharif University, Iran[<a href="http://icpc.sharif.edu/">Here</a>]</br> -->
-		2010 - 10<sup>th</sup> Place,  Asia Region Competitions, Sharif University, Tehran, Iran (90 Teams)[<a href="http://icpc.sharif.edu/">Here</a>]</br>
-		<!-- 2010 - Finalist in 6<sup>th</sup> AUM National ACM Programming Competition, Mashhad, Iran[<a href="http://acmparand.blog.ir/">Here</a>]</br> -->		
+
+		<style>
+		  .honor-row { display: flex; align-items: baseline; gap: 0.8em; padding: 0.45em 2em; border-bottom: 1px solid #f2f2f2; }
+		  .honor-row:last-child { border-bottom: none; }
+		  .honor-badge { flex-shrink: 0; font-size: 0.68em; font-weight: bold; border-radius: 10px; padding: 0.15em 0.6em; white-space: nowrap; }
+		  .hb-paper      { background: #fffbea; color: #9a7000; border: 1px solid #f0c040; }
+		  .hb-competition{ background: #dce8ff; color: #2a52a0; border: 1px solid #a8c0f0; }
+		  .hb-scholarship{ background: #d4f5e2; color: #1a7a42; border: 1px solid #a0d9b8; }
+		  .hb-travel     { background: #f0e6ff; color: #6a2aaa; border: 1px solid #c8a0f0; }
+		  .hb-ranking    { background: #e8e8e8; color: #555;    border: 1px solid #ccc; }
+		  .honor-year    { flex-shrink: 0; font-size: 0.82em; color: #aaa; font-style: italic; width: 2.8em; text-align: right; }
+		  .honor-text    { flex: 1; font-size: 0.88em; line-height: 1.5em; }
+		  .honor-star    { color: #f0c040; margin-right: 0.2em; }
+		  .honor-section-title { font-size: 0.75em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.08em; color: #bbb; padding: 1em 2em 0.3em; }
+		</style>
+
+		<div class="honor-section-title">Recent</div>
+
+		<div class="honor-row">
+			<span class="honor-year">2025</span>
+			<span class="honor-badge hb-travel">Travel Award</span>
+			<span class="honor-text"><a href="https://www.openmindresearch.org/">OpenMind</a> → <a href="https://rldm.org/">RLDM</a> Conference, Ireland</span>
+		</div>
+		<div class="honor-row">
+			<span class="honor-year">2019</span>
+			<span class="honor-badge hb-paper">Best Paper</span>
+			<span class="honor-text"><span class="honor-star">&#9733;</span><b>Best Student Paper</b> · <a href="http://www.acml-conf.org/2019/conference/accepted-papers/">ACML 2019</a></span>
+		</div>
+		<div class="honor-row">
+			<span class="honor-year">2019</span>
+			<span class="honor-badge hb-scholarship">Scholarship</span>
+			<span class="honor-text">Accommodation Scholarship · MLSS 2019</span>
+		</div>
+		<div class="honor-row">
+			<span class="honor-year">2018</span>
+			<span class="honor-badge hb-paper">Best Poster</span>
+			<span class="honor-text">Best Poster · TMLSS 2018</span>
+		</div>
+		<div class="honor-row">
+			<span class="honor-year">2018</span>
+			<span class="honor-badge hb-scholarship">Scholarship</span>
+			<span class="honor-text">Full Scholarship · TMLSS 2018</span>
+		</div>
+
+		<div class="honor-section-title">Early Career</div>
+
+		<div class="honor-row">
+			<span class="honor-year">2016</span>
+			<span class="honor-badge hb-ranking">Ranking</span>
+			<span class="honor-text">Ranked 3<sup>rd</sup> · AI Major, Shiraz University</span>
+		</div>
+		<div class="honor-row">
+			<span class="honor-year">2014</span>
+			<span class="honor-badge hb-ranking">Ranking</span>
+			<span class="honor-text"><b>Top 2%</b> · Iranian PhD Entrance Exam (AI)</span>
+		</div>
+		<div class="honor-row">
+			<span class="honor-year">2014</span>
+			<span class="honor-badge hb-competition">Competition</span>
+			<span class="honor-text"><b>1<sup>st</sup> Place</b> · <a href="http://2014.iranopen.ir/en-gb/home.aspx">IranOpen</a> RoboCup 2D Simulation League (as research supervisor)</span>
+		</div>
+		<div class="honor-row">
+			<span class="honor-year">2011</span>
+			<span class="honor-badge hb-competition">Competition</span>
+			<span class="honor-text"><span class="honor-star">&#9733;</span><b>Award</b> · <a href="http://olympiad.sanjesh.org">16<sup>th</sup> Iran National Collegiate Olympiad</a> (Computer Engineering)</span>
+		</div>
+		<div class="honor-row">
+			<span class="honor-year">2011</span>
+			<span class="honor-badge hb-scholarship">Scholarship</span>
+			<span class="honor-text"><b>Honorary Admission</b> · M.Sc. in AI, Amirkabir University of Technology (<a href="http://momtaz.aut.ac.ir/">Exceptional Talent Program</a>)</span>
+		</div>
+		<div class="honor-row">
+			<span class="honor-year">2011</span>
+			<span class="honor-badge hb-competition">Competition</span>
+			<span class="honor-text">5<sup>th</sup> Place · <a href="http://cilab.sejong.ac.kr/cig2011/">IEEE CIG</a>, <a href="http://www.pacman-vs-ghosts.net/">Ms. PacMan Ghost Controllers</a> (Team: Scintillants)</span>
+		</div>
+
+		<!-- ACM-ICPC block -->
+		<div style="margin: 1em 2em 0; border-top: 1px solid #eee; padding-top: 1em;">
+			<div style="display: flex; align-items: flex-start; gap: 1.2em;">
+				<img src="images/RSM.jpeg" style="width: 38%; flex-shrink: 0; border-radius: 4px;">
+				<div>
+					<div style="margin-bottom: 0.4em;">
+						<b><a href="http://icpc.baylor.edu/">ACM-ICPC</a></b> · 2010
+						<img src="images/ACM-ICPC.png" style="height: 1.8em; vertical-align: middle; margin: 0 0.3em;">
+						<span style="font-size: 0.85em; color: #666;">Scintillants → RSM Team</span>
+					</div>
+					<div class="honor-row" style="padding: 0.3em 0; border: none;">
+						<span class="honor-badge hb-competition">Competition</span>
+						<span class="honor-text"><span class="honor-star">&#9733;</span><b>10<sup>th</sup> Place</b> · <a href="http://icpc.sharif.edu/">Asia Regionals</a>, Sharif University (90 teams)</span>
+					</div>
+				</div>
+			</div>
+		</div>
 	</article>
-    <article id="experience" class = "panel">
-	<header>
-		<b>Talks:</b>
-	</header>
-	<ul style="list-style-type:circle">
-	<li> 2020 Sep - Talk on Programming, Shiraz University
-	<li> 2019 Jun - Talk on Academia Abroad, Shiraz University
-	</ul>
-	<header>
-		<b>Teaching Experience:</b>
-	</header>
-		<ul style="list-style-type:circle">
-			<li> Teaching Assistant - Shiraz University:</li>
-			<ul>
-				<li> Advanced Machine Learning: Spring 2015</li>
-				<li> Machine Learning: Fall 2014.</li>
-				<li>Artificial Intelligence:  Spring 2014, Fall 2013, 2010.</li>
-				<li>Algorithm Design: Spring 2011.</li>
-				<li>Discrete Mathematics: Spring 2010, 2009, Fall 2008.</li>
-				<li>Fundamentals of Programming: Fall 2010, 2009.</li>
-			</ul>
-			<li>Lecturer:</li>
-			<ul>			
-				<li>2012 - 2014 - Introduction to Computer Science: Farzanegan High school.</li>
-				<li>2008 - 2010 - <a href="http://www.ioinformatics.org/">IOI</a> and <a href="http://icpc.baylor.edu/">ACM</a>: Farzanegan High school.</li>
-				<li>2012 - 2014 - <a href="http://www.ioinformatics.org/">IOI</a> and <a href="http://icpc.baylor.edu/">ACM</a>: Farzanegan High school.</li>
-				<li class="icon icon-star">ACM class for freshmen: Spring 2008</li>		
-			</ul>			
 
-		</ul>
-	<header>
-		<b>Work Experience:</b>
-	</header>
-	<ul style = "list-style-type:circle">
-		<li> 2018 - 2022 - Inria Lille - Nord Europe, Magnet team, PhD Researcher (3 years and 6 months)</li>
-		<li> 2017 - Inria Lille - Nord Europe, SequeL team, Research internship (4 months).</li>
-		<li> 2016 - Shiraz University Center of Intelligent Vision and Image Processing (6 months).
-		<li> 2014 - 2016 - Shiraz University Machine Learning Lab</li>
-		<li> 2013 - 2014 - Shiraz University Image processing and Vision lab</li>
-	</ul>
-	<header>
-		<b>Memberships:</b>
-	</header>
-	<ul style="list-style-type:circle">
-		<li>2016	- <a href="http://aiesec.org/"><b>AIESEC</b></a> Shiraz team member</li>
-		<li>2015 - 2016 - Shiraz University "Future Team"</li>
-		<li>2008 - 2012 - ACM student membership</li>
-		<li>2007 - 2011 - Shiraz University <b>ACM</b> association</li>
-		<li>2007 - 2009 - Computer Department's "Students' Scientific Council"</li>
-	</ul>
-	
-	<header>
-		<b>Extra-Curricular Activities</b>
-	</header>
-	<ul style="list-style-type:circle">
-		<li> 2016 - AIESEC, Team Member </li>
-		<li> 2016 - <a href = "http://tedxshirazuniversity.com/"><b>TEDxShirazUniversity</b></a>:<br>
-		- Organizing committee Member<br>
-		- Content Management & Media team Member</li>		
-		<li> 2015 - Winter - "Hour of Code" for elementary school students<br>
-		- Organizing Committee Member</li>
-		<li class="icon icon-star">2014 - Fall - Weekly presentations of AI</li>
-			&nbsp&nbsp We presented various topics: Natural Language Processing, Reinforcement Learning, Optimization, etc.<br>
-		<li>2009 - "University Open Day program"<br>
-		- Student chair of Computer Department</li>
+  <!-- ── Reach Out ── -->
+  <article id="connect" class="panel">
+    <header>
+      <h2>Reach Out</h2>
+    </header>
 
-	</ul>
+    <p style="margin: -0.5em 0 1.5em 0; color: #555; font-size: 0.95em;">
+      Feel free to reach out — I'm always happy to chat about research, collaborations, or ideas.
+    </p>
 
+    <!-- One row: Professional left, Personal right -->
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; padding: 0 1em;">
 
-	<div class="icon icon-star">:= Our Team/I have been the initiator.</div>
-    </article>
-    <article id="courses" class="panel">
-	Image Processing And Vision:
-%	\begin{itemize}
-%		\item[$\circ$]Participant of {``A 3 days workshop on Image processing''}, held by Shiraz University \\Vision team, Shiraz University, Shiraz, Iran \hfill 2010
-%		\item[$\circ$]Member of Shiraz University's Vision Lab team \hfill 2012 - 2013
+      <!-- Professional group -->
+      <div>
+        <div style="font-size: 0.78em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.08em; color: #999; margin-bottom: 0.6em;">Professional</div>
+        <div style="display: flex; align-items: flex-start; gap: 2em;">
 
-    </article>
-    <article id="email" class="panel">
-      <header>
-        <h2>Email Me</h2>
-      </header>
-<div class="icon icon-mail"> myname mylastname aalto fi {with [at] in the second, and [dot] in left spaces}</div>
-<!-- <div class="icon icon-call"> Office: +98-71-3613-3669</div> -->
-
-<!--
-      <form action="#" method="post">
-        <div class="5grid">
-          <div class="row">
-            <div class="6u">
-              <input type="text" class="text" name="name" placeholder="Name">
-            </div>
-            <div class="6u">
-              <input type="text" class="text" name="email" placeholder="Email">
-            </div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 0.35em;">
+            <a href="mailto:mahsa.asadi@aalto.fi" class="icon icon-mail"
+               style="font-size: 3em; line-height: 1; text-decoration: none; color: inherit; opacity: 0.75;"
+               title="myname mylastname aalto fi {with [at] in the second, and [dot] in left spaces}"><span style="display:none;">Email</span></a>
+            <span style="font-size: 0.72em; color: #666;">Email</span>
           </div>
-          <div class="row">
-            <div class="12u">
-              <input type="text" class="text" name="subject" placeholder="Subject">
-            </div>
+
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 0.35em;">
+            <a href="http://ir.linkedin.com/pub/mahsa-asadi/70/125/b09/" class="icon icon-linkedin"
+               style="font-size: 3em; line-height: 1; text-decoration: none; color: #0077b5; opacity: 0.85;"
+               title="LinkedIn — Mahsa Asadi"><span style="display:none;">LinkedIn</span></a>
+            <span style="font-size: 0.72em; color: #666;">LinkedIn</span>
           </div>
-          <div class="row">
-            <div class="12u">
-              <textarea name="message" placeholder="Message"></textarea>
-            </div>
+
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 0.35em;">
+            <a href="https://bsky.app/profile/llvllahsa.bsky.social"
+               style="display: flex; align-items: center; text-decoration: none; opacity: 0.85;"
+               title="Bluesky — @llvllahsa.bsky.social">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                   style="width: 3em; height: 3em;" fill="#0085ff">
+                <path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.022-.276.04-.415.056-3.912.58-7.387 2.005-2.83 7.078 5.013 5.19 6.87-1.113 7.823-4.308.953 3.195 2.05 9.271 7.733 4.308 4.267-4.308 1.172-6.498-2.74-7.078a8.741 8.741 0 0 1-.415-.056c.14.017.279.036.415.056 2.67.297 5.568-.628 6.383-3.364.246-.828.624-5.79.624-6.478 0-.69-.139-1.861-.902-2.204-.659-.298-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8Z"/>
+              </svg>
+            </a>
+            <span style="font-size: 0.72em; color: #666;">Bluesky</span>
           </div>
-          <div class="row">
-            <div class="12u">
-              <input type="submit" class="button" value="Send Message">
-            </div>
+
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 0.35em;">
+            <a href="https://x.com/llvllahsaa" class="icon icon-twitter"
+               style="font-size: 3em; line-height: 1; text-decoration: none; color: #1DA1F2; opacity: 0.8;"
+               title="Twitter — @llvllahsaa"><span style="display:none;">Twitter</span></a>
+            <span style="font-size: 0.72em; color: #666;">Twitter</span>
           </div>
+
         </div>
-      </form>
--->
-    </article>
-<article id="Writing" class="panel">
-	<header> <h2> Publication </h2></header>
-		<ul style="list-style-type:circle">
-		<li> 2022 -  Identifying structure in online and collaborative learning problems </br> <a href="https://inria.hal.science/tel-03892355/document"> PhD Thesis,</a> <b>M. Asadi.</b></li>
-		<li> 2022 - Collaborative Algorithms for Online Personalized Mean Estimation </br> <a href="https://openreview.net/forum?id=VipljNfZSZ"> TMLR</a> 2022, <b> M. Asadi</b>, A. Bellet, O-A. Maillard, M. Tommasi.</li>
-		<li> 2019 - Model-Based Reinforcement Learning Exploiting State-Action Equivalence</br> ACML 2019, <a href="http://proceedings.mlr.press/v101/asadi19a.html">Proceeding of Machine Learning Research,</a><b> M. Asadi</b>, S. Talebi, H. Bourel, O. Maillard.</li>
-		<li> 2016 - Distributed Multi-task Learning </br> <a href="/Documents/DMTL%20-%20Mahsa%20Thesis.pdf">Master Thesis,</a> <b>M. Asadi.</b></li> </br>
+      </div>
 
-      <header>
-        <h2>My Summaries</h2>
-      </header>
-<section class="5grid is-gallery">
-<div class="row">
-          <div class="4u"><a href="#" class="image image-25"><img src="images/concentrationinequality.jpeg" alt=""> </a> </div>
-          <br><br><br><b><a href = "Documents/ConcentrationInequalities.pdf">Draft on Concentration Inequalities(In Progress)</a></b>
-        </div>
-</section>
-<!-- <div class="icon icon-call"> Office: +98-71-3613-3669</div> -->
+      <!-- Personal group -->
+      <div style="text-align: right;">
+        <div style="font-size: 0.78em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.08em; color: #999; margin-bottom: 0.6em;">Personal</div>
+        <div style="display: flex; align-items: flex-start; gap: 2em;">
 
-<!--
-      <form action="#" method="post">
-        <div class="5grid">
-          <div class="row">
-            <div class="6u">
-              <input type="text" class="text" name="name" placeholder="Name">
-            </div>
-            <div class="6u">
-              <input type="text" class="text" name="email" placeholder="Email">
-            </div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 0.35em;">
+            <a href="https://www.instagram.com/feminist_in_progress/"
+               style="font-size: 3em; line-height: 1; text-decoration: none; color: #b5179e; opacity: 0.85;"
+               title="Instagram — @feminist_in_progress">♀</a>
+            <span style="font-size: 0.72em; color: #666;">Activism</span>
           </div>
-          <div class="row">
-            <div class="12u">
-              <input type="text" class="text" name="subject" placeholder="Subject">
-            </div>
+
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 0.35em;">
+            <a href="https://www.instagram.com/mahs.aaa/" class="icon icon-instagram"
+               style="font-size: 3em; line-height: 1; text-decoration: none;
+                      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+                      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;"
+               title="Instagram — @mahs.aaa"><span style="display:none;">Instagram</span></a>
+            <span style="font-size: 0.72em; color: #666;">Instagram</span>
           </div>
-          <div class="row">
-            <div class="12u">
-              <textarea name="message" placeholder="Message"></textarea>
-            </div>
-          </div>
-          <div class="row">
-            <div class="12u">
-              <input type="submit" class="button" value="Send Message">
-            </div>
-          </div>
+
         </div>
-      </form>
--->
-    </article>
+      </div>
+
+    </div>
+
+  </article>
 
   </div>
   <div id="footer">
     <ul class="links">
       <li>&copy; Mahsa Asadi </li>
       <li>Design : <a href="http://html5up.net/">HTML5 Up!</a></li>
-      </br>Construction: 10-Oct-2014 - Last update: 7-Dec-2022
+      </br>Construction: 10-Oct-2014 - Last update: 13-Apr-2026
     </ul>
   </div>
 </div>
